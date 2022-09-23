@@ -5,9 +5,6 @@ function Corners() {
     <div className='cornerWeb'>
         <img src='cornerSpiderweb.png'/>
     </div>
-    <div className='cornerHouse'>
-        <img src='hauntedHouse.png'/>
-    </div>
     </>
   )
 }
