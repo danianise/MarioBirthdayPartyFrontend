@@ -16,7 +16,7 @@
   display: flex;
   width: 90%;
   /* min-height: calc((1vw + 1vh) * 75); */
-  height: 79%;
+  height: 85%;
   /* center page with absolute position */
   top: 0%; left: 50%; transform: translate(-50%, 0);
   /* margin: 2em 0; */
@@ -52,14 +52,18 @@
 }
 
 .cemetery img {
-  width: 99%;
+  width: 100%;
   position: absolute;
   z-index: -1;
   bottom: 0;
   margin-bottom: 0;
-  left: 0.5%;
+  left: 0;
   /* right: 0; */
   opacity: 0.8;
+}
+
+.RSVPform {
+  display: none;
 }
 
 
