@@ -29,6 +29,7 @@ function RSVPForm() {
                 Your Name:
             </label>
             <input
+                placeholder='Your Name'
                 id='name'
                 type='text'
                 onChange={handleChange}
@@ -36,21 +37,22 @@ function RSVPForm() {
             />
             <br />
 
-            <label htmlFor='guestCount'>
+            {/* <label htmlFor='guestCount'>
                 How many people will be coming? <br /> (include yourself!)
-            </label>
+            </label> */}
             <input
+                placeholder="How many people will be coming?"
                 id='guestCount'
-                type='number'
+                type='text'
                 onChange={handleChange}
                 value={formState.guestCount}
             />
             <br />
 
-            <label htmlFor='message'>Leave a Message for the Hoeys:</label>
+            {/* <label htmlFor='message'>Leave a Message for the Hoeys:</label> */}
             <textarea
               id='message'
-              placeholder='(Optional)'
+              placeholder='Leave a Message for the Hoeys (Optional)'
               onChange='handleChange'
               type='text'  
             />

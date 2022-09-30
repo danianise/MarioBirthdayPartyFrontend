@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Corners() {
+function Images() {
   return (<>
-    <div className='cornerWeb'>
-        <img src='cornerSpiderweb.png'/>
+    <div className='spiderWeb'>
+        <img src='spiderWeb.png'/>
     </div>
 
-    <div className='cornerSkull'>
+    <div className='skull'>
       <img src='skull.png'/>
     </div>
 
@@ -22,4 +22,4 @@ function Corners() {
   )
 }
 
-export default Corners
+export default Images
