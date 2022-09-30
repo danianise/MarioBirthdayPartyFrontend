@@ -4,7 +4,13 @@
   /* background-color: #efe5d5; */
   height: 100vh;
   padding-top: 20px;
+  font-family: 'IM Fell English SC', serif;
+  /* z-index: 10; */
 }
+
+/* .App h1 {
+  font-family: 'Creepster', cursive;
+} */
 
 #parchment {
   z-index: -1;
@@ -24,17 +30,39 @@
 
 .cornerWeb img{
   width: 25vw;
-  float: left;
-  margin-top: -20px;
-  z-index: -1;
+  left: 0;
+  top: 0;
+  /* float: left; */
+  /* margin-top: -20px; */
+  position: absolute;
+  /* z-index: -1; */
+  /* z-index: 1; */
 }
 
-.cornerHouse img {
-  height: 40vh;
-  width: auto;
-  float: right;
-  margin-top: 60vh;
+.cornerSkull img{
+  width: 5vw;
+  
 }
+
+.moon img{
+  width: 25vw;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.cemetery img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  opacity: 0.8;
+}
+
 
 .RSVPform form {
   /* border: 1px solid red; */
@@ -50,4 +78,8 @@
 
 .RSVPform input, .RSVPform textarea {
   width: 30vw;
+}
+
+.App hr {
+  width: 40vw;
 }

@@ -9,7 +9,9 @@ function App() {
     <div className="App">
       <Background />
       <Corners />
-      <h1>Oscar Hoey's 3rd Birthday Party</h1>
+      <h3>join us for</h3>
+      <h1>Oscar Hoey's 3rd Birthday Party</h1><hr />
+      <p>Saturday, November 5 at 2pm</p>
       <RSVPForm />
       
     </div>
