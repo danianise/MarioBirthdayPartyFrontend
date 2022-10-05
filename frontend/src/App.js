@@ -2,15 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 import Images from './components/Images';
 import RSVPForm from './components/RSVPForm';
+import DeclineForm from './components/DeclineForm';
 import Background from './components/Background';
 import {useState} from 'react'
 
 function App() {
 
-  const [showForm, setShowForm] = useState(false)
+  const [showResponseForm, setShowResponseForm] = useState(false)
+  const [showDeclineForm, setShowDeclineForm] = useState(false)
 
-  const seeForm = () => {
-    setShowForm(!showForm);
+  const seeResponseForm = () => {
+    setShowResponseForm(!showResponseForm);
+  }
+  const seeDeclineForm = () => {
+    setShowDeclineForm(!showDeclineForm);
   }
 
   return (
@@ -18,19 +23,25 @@ function App() {
       <Background />
       <Images />
       <div className='description'>
-        <h3>your spirit has been summoned</h3>
+        <h2>your spirit has been summoned</h2>
         <h1>to Oscar Hoey's<br />Spooky 3rd Birthday Party</h1>
-        <p>costumes encouraged</p>
+        <h3>costumes encouraged</h3>
         <hr />
-        <p>Saturday, November 5 at 2pm</p>
-        <p>102 Pratt St<br />Lunenburg, MA</p>
-        <p>Please<br />
-          <button onClick={seeForm}>RSVP</button><br />
+        <h2>Saturday, November 5 at 2pm</h2>
+        <h2>102 Pratt St<br />Lunenburg, MA</h2>
+        <h2>Please<br />
+          <button onClick={seeResponseForm}>RSVP</button>
+          <span style={{fontSize: '10px'}}> OR </span>
+          <button onClick={seeDeclineForm}>Decline</button>
+          <br />
           by October 15
-        </p>
+        </h2>
       </div>
-      {showForm && (
+      {showResponseForm && (
         <RSVPForm />
+      )}
+      {showDeclineForm && (
+        <DeclineForm />
       )}
       
     </div>

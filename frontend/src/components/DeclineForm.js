@@ -1,15 +1,13 @@
 import React, {useState} from 'react'
-// import {useNavigate} from 'react-router-dom'
 
-function RSVPForm() {
+function DeclineForm() {
 
     const initialState = {
         name: "",
         guestCount: "",
-        message: " "
+        message: ""
     }
     const [formState, setFormState] = useState(initialState)
-    // const navigate = useNavigate()
 
     const handleChange = event => {
         setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -20,7 +18,7 @@ function RSVPForm() {
         //do something with the data in the component state
         console.log(formState)
 
-        const url = 'localhost:8000/responses/'
+        const url = 'localhost:8000/declines/'
         const options = {
             method: 'POST',
             headers: {
@@ -47,11 +45,9 @@ function RSVPForm() {
     }
 
   return (
-    <div className='RSVPform'>
+    <div className='declineForm'>
+        <h3>I Regretfully Decline:</h3>
         <form onSubmit={handleSubmit}>
-            {/* <label htmlFor='name'>
-                Your Name:
-            </label> */}
             <input
                 placeholder='Your Name'
                 id='name'
@@ -59,21 +55,7 @@ function RSVPForm() {
                 onChange={handleChange}
                 value={formState.name}
             />
-            <br />
-
-            {/* <label htmlFor='guestCount'>
-                How many people will be coming? <br /> (include yourself!)
-            </label> */}
-            <input
-                placeholder="How many people will be coming?"
-                id='guestCount'
-                type='text'
-                onChange={handleChange}
-                value={formState.guestCount}
-            />
-            <br />
-
-            {/* <label htmlFor='message'>Leave a Message for the Hoeys:</label> */}
+            <br /><br />
             <textarea
               id='message'
               placeholder='Leave a Message for the Hoeys (Optional)'
@@ -81,11 +63,11 @@ function RSVPForm() {
               type='text'  
             />
             <br />
-
+            <br />
             <button type='submit'>Submit</button>
         </form>
     </div>
   )
 }
 
-export default RSVPForm
+export default DeclineForm
