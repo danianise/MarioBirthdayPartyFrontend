@@ -25,9 +25,9 @@ function RSVPForm() {
   return (
     <div className='RSVPform'>
         <form onSubmit={handleSubmit}>
-            <label htmlFor='name'>
+            {/* <label htmlFor='name'>
                 Your Name:
-            </label>
+            </label> */}
             <input
                 placeholder='Your Name'
                 id='name'
