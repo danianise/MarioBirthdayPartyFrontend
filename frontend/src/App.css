@@ -72,3 +72,9 @@ form input, form textarea {
 .App hr {
   width: 40vw;
 }
+
+footer {
+  float: left;
+  bottom: 0;
+  position: absolute;
+}

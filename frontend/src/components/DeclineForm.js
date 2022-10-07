@@ -45,7 +45,7 @@ function DeclineForm() {
 
   return (
     <div className='declineForm'>
-        <h3>I Regretfully Decline:</h3>
+        <h3>Boo... I can't make it!</h3>
         <form onSubmit={handleSubmit}>
             <input
                 placeholder='Your Name'
