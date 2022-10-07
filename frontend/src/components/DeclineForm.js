@@ -4,8 +4,7 @@ function DeclineForm() {
 
     const initialState = {
         name: "",
-        guestCount: "",
-        message: ""
+        decline_message: ""
     }
     const [formState, setFormState] = useState(initialState)
 
@@ -18,7 +17,7 @@ function DeclineForm() {
         //do something with the data in the component state
         console.log(formState)
 
-        const url = 'localhost:8000/declines/'
+        const url = 'http://localhost:8000/declines/'
         const options = {
             method: 'POST',
             headers: {
@@ -57,10 +56,11 @@ function DeclineForm() {
             />
             <br /><br />
             <textarea
-              id='message'
+              id='decline_message'
               placeholder='Leave a Message for the Hoeys (Optional)'
-              onChange='handleChange'
-              type='text'  
+              onChange={handleChange}
+              type='text'
+              value={formState.decline_message}  
             />
             <br />
             <br />

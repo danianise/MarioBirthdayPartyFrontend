@@ -9,4 +9,4 @@ class ResponseSerializer(serializers.ModelSerializer):
 class DeclineSerializer(serializers.ModelSerializer):
     class Meta:
         model = Decline
-        fields = ('name', 'message')
+        fields = ('name', 'decline_message')

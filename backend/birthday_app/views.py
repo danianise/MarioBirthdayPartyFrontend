@@ -1,5 +1,5 @@
-from rest_framework import generics
 from .serializers import DeclineSerializer, ResponseSerializer
+from rest_framework import generics
 from .models import Response, Decline
 
 # Create your views here.
@@ -11,6 +11,15 @@ class ResponseList(generics.ListCreateAPIView):
     serializer_class=ResponseSerializer
     queryset=Response.objects.all()
 
+class ResponseDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = ResponseSerializer
+    queryset = Response.objects.all()
+
+
 class DeclineList(generics.ListCreateAPIView):
     serializer_class=DeclineSerializer
     queryset=Decline.objects.all()
+
+class DeclineDetail(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = DeclineSerializer
+    queryset = Decline.objects.all()
