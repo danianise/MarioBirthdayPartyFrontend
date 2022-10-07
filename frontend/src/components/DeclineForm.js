@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 
 function DeclineForm() {
 
@@ -7,6 +8,7 @@ function DeclineForm() {
         decline_message: ""
     }
     const [formState, setFormState] = useState(initialState)
+    const navigate = useNavigate()
 
     const handleChange = event => {
         setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -39,13 +41,13 @@ function DeclineForm() {
             .catch(err => {
                 console.log(err)
             })
-            // navigate(`/conversations/${topicForRoute}`)
+            navigate('/declined')
             setFormState(initialState)
     }
 
   return (
     <div className='declineForm'>
-        <h3>Boo... I can't make it!</h3>
+        <h1>Boo... I can't make it!</h1>
         <form onSubmit={handleSubmit}>
             <input
                 placeholder='Your Name'

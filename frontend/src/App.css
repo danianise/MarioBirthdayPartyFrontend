@@ -60,13 +60,10 @@
   width: fit-content;
 }
 
-.RSVPform input, .RSVPform textarea {
-  width: 50vw;
-}
-
 form input, form textarea {
   border-radius: 5px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  width: 50vw;
 }
 
 .App hr {

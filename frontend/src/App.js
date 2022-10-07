@@ -1,5 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from "react-router-dom" 
+
+import Main from './components/Main';
 import Images from './components/Images';
 import RSVPForm from './components/RSVPForm';
 import DeclineForm from './components/DeclineForm';
@@ -10,17 +12,17 @@ import {useState} from 'react'
 
 function App() {
 
-  const [showResponseForm, setShowResponseForm] = useState(false)
-  const [showDeclineForm, setShowDeclineForm] = useState(false)
+  // const [showResponseForm, setShowResponseForm] = useState(false)
+  // const [showDeclineForm, setShowDeclineForm] = useState(false)
 
-  const seeResponseForm = () => {
-    setShowResponseForm(!showResponseForm);
-    setShowDeclineForm(false)
-  }
-  const seeDeclineForm = () => {
-    setShowDeclineForm(!showDeclineForm);
-    setShowResponseForm(false)
-  }
+  // const seeResponseForm = () => {
+  //   setShowResponseForm(!showResponseForm);
+  //   setShowDeclineForm(false)
+  // }
+  // const seeDeclineForm = () => {
+  //   setShowDeclineForm(!showDeclineForm);
+  //   setShowResponseForm(false)
+  // }
 
   return (
     <div className="App">
@@ -28,7 +30,7 @@ function App() {
       <Images />
       {/* <YesConfirmation /> */}
       {/* <DeclineConfirmation /> */}
-      {showResponseForm || showDeclineForm 
+      {/* {showResponseForm || showDeclineForm 
         ? ""
         : <div className='description'>
             <h2>your spirit has been summoned</h2>
@@ -40,7 +42,7 @@ function App() {
           </div>
       }
           <h2>Please<br />
-            <button onClick={seeResponseForm}>RSVP</button>
+            <button onClick={seeResponseForm}>Accept</button>
             <span style={{fontSize: '10px'}}> OR </span>
             <button onClick={seeDeclineForm}>Decline</button>
             <br />
@@ -52,7 +54,13 @@ function App() {
       )}
       {showDeclineForm && (
         <DeclineForm />
-      )}
+      )} */}
+
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/accepted' element={<YesConfirmation />} />
+        <Route path='/declined' element={<DeclineConfirmation />} />
+      </Routes>
       
       <footer>
       © Danielle Hoey 2022

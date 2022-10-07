@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-// import {useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 function RSVPForm() {
 
@@ -9,7 +9,7 @@ function RSVPForm() {
         message: ""
     }
     const [formState, setFormState] = useState(initialState)
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const handleChange = event => {
         setFormState({ ...formState, [event.target.id]: event.target.value })
@@ -62,12 +62,13 @@ function RSVPForm() {
             .catch(err => {
                 console.log(err)
             })
-            // navigate(`/conversations/${topicForRoute}`)
+            navigate('/accepted')
             setFormState(initialState)
     }
 
   return (
     <div className='RSVPform'>
+        <h1>Join us if you DARE</h1>
         <form onSubmit={handleSubmit}>
             {/* <label htmlFor='name'>
                 Your Name:
