@@ -13,9 +13,11 @@ function App() {
 
   const seeResponseForm = () => {
     setShowResponseForm(!showResponseForm);
+    setShowDeclineForm(false)
   }
   const seeDeclineForm = () => {
     setShowDeclineForm(!showDeclineForm);
+    setShowResponseForm(false)
   }
 
   return (
