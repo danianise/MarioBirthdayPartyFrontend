@@ -68,7 +68,8 @@ function RSVPForm() {
 
   return (
     <div className='RSVPform'>
-        <h1>Join us if you DARE</h1>
+        <br />
+        <h2 style={{color: '#FBD000'}}>Let's Go!</h2>
         <form onSubmit={handleSubmit}>
             {/* <label htmlFor='name'>
                 Your Name:
@@ -97,7 +98,7 @@ function RSVPForm() {
             {/* <label htmlFor='message'>Leave a Message for the Hoeys:</label> */}
             <textarea
               id='message'
-              placeholder='Leave a Message for the Hoeys (Optional)'
+              placeholder='Leave a Message (Optional)'
               onChange={handleChange}
               type='text'
               value={formState.message}  

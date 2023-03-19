@@ -19,25 +19,41 @@ function Main() {
 
 
   return (
-    <div className='App'>
+    <>
+    <div className='main'>
+      <div className='description'>
       {showResponseForm || showDeclineForm 
         ? ""
-        : <div className='description'>
-            <h2>your spirit has been summoned</h2>
-            <h1>to Oscar Hoey's<br />Spooky 3rd Birthday Party</h1>
-            <h3>costumes encouraged</h3>
-            <hr />
-            <h2>Saturday, November 5 at Noon</h2>
-            <h2>102 Pratt St<br />Lunenburg, MA</h2>
-          </div>
+        : <>
+            <h3>Jeffrey Hoey has LEVELED UP to age 6!</h3>
+            <h2>Join us for a<br />Super 6th Birthday Party</h2>
+            {/* <h3>costumes encouraged</h3> */}
+            {/* <hr /> */}
+            {/* <img alt='Yoshi' src='Yoshi.png' id='Yoshi'/> */}
+            <h3>Saturday, April 29<br />1-2:30pm</h3>
+            <hr/>
+            <h3>Ninja Academy New England<br />321 Massachusetts Ave, Lunenburg, MA</h3>
+          </>
+          
       }
-          <h2>Please<br />
-            <button onClick={seeResponseForm}>Accept</button>
-            <span style={{fontSize: '10px'}}> OR </span>
-            <button onClick={seeDeclineForm}>Decline</button>
-            <br />
-            by October 15
-          </h2>
+          <h3>
+            Please
+            <br /><br />
+            <div className='buttonsContainer'>
+              <div className='buttons'>
+                <img className='greenMushroom' src='greenMushroom.webp' onClick={seeResponseForm}/>
+                  Accept
+              </div>
+              <span style={{fontSize: '10px'}}> OR </span>
+              <div className='buttons'>
+                <img className='redMushroom' src='redMushroom.webp' onClick={seeDeclineForm}/>
+                Decline
+              </div>
+            </div>
+            <br /><br />
+            by April 15
+          </h3>
+        </div>
         
       {showResponseForm && (
         <RSVPForm />
@@ -45,7 +61,17 @@ function Main() {
       {showDeclineForm && (
         <DeclineForm />
       )}  
+      <div id='images'>
+        <img alt='Mario' src='Mario.png' id='Mario'/>
+        <img alt='Luigi' src='Luigi.png' id='Luigi'/>
+      </div>
     </div>
+    <div id='footer'>
+        <footer>
+        © Danielle Hoey 2023
+        </footer>
+    </div>
+    </>
   )
 }
 

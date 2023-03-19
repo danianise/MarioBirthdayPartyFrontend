@@ -46,8 +46,9 @@ function DeclineForm() {
     }
 
   return (
-    <div className='declineForm'>
-        <h1>Boo... I can't make it!</h1>
+    <div className='declineForm'><br />
+        <h3 style={{color: '#FBD000'}}>Sorry... Can't make it!</h3>
+        <h3 style={{color: 'red'}}>(Game Over)</h3>
         <form onSubmit={handleSubmit}>
             <input
                 placeholder='Your Name'
@@ -59,7 +60,7 @@ function DeclineForm() {
             <br /><br />
             <textarea
               id='decline_message'
-              placeholder='Leave a Message for the Hoeys (Optional)'
+              placeholder='Leave a Message (Optional)'
               onChange={handleChange}
               type='text'
               value={formState.decline_message}  

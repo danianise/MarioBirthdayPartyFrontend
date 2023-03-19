@@ -1,52 +1,53 @@
 .App {
   text-align: center;
-  padding-top: 20px;
-  font-family: 'IM Fell English SC', serif;
+  color: white;
+  text-shadow: 2px 2px black;
+  padding: 10vh 0 10vh 0;
+  font-family: 'Press Start 2P', cursive;
+  /* background-image: url('../public/Background.jpeg');
+  background-position:bottom; */
 }
 
-#parchment {
-  z-index: -1;
-  position: absolute;
+#Mario{
+  width: 10vw;
+  margin: -30vh 0 10vh 5vw;
+}
+#Luigi{
+  width: 10vw;
+  margin: -30vh 5vw 10vh 0;
+}
+#Yoshi{
+  width: 20vw;
+}
+#images{
   display: flex;
-  width: 90%;
-  height: 85%;
-  top: 0%; left: 50%; transform: translate(-50%, 0);
-  padding: 4em;
-  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
-  background: #fffef0;
-  filter: url(#wavy2);
+  justify-content:space-between;
 }
 
-.spiderWeb img{
-  width: 25vw;
-  left: 0;
-  top: 0;
-  position: absolute;
-}
+/* .redMushroom, .greenMushroom{
+  width: 15vw;
+  margin-bottom: 10px;
+} */
 
-.skull img{
+.redMushroom, .greenMushroom{
   width: 5vw;
-  
+  padding-bottom: 25px;
 }
 
-.moon img{
-  width: 25vw;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  z-index: -1;
-  opacity: 0.8;
+.buttonsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cemetery img {
-  width: 100%;
-  position: absolute;
-  z-index: -1;
-  bottom: -40px;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  left: 0;
-  opacity: 0.5;
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: 15vh;
+  margin: 10px 25px;
 }
 
 .RSVPform form {
@@ -70,8 +71,32 @@ form input, form textarea {
   width: 40vw;
 }
 
-footer {
+#footer {
+  display: block;
   float: left;
   bottom: 0;
+  position: fixed;
+}
+
+.demo-wrap {
+  position: relative;
+}
+
+.demo-wrap:before {
+  content: ' ';
+  display: block;
   position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.9;
+  background-image: url('../public/Background.jpeg');
+  /* background-repeat: no-repeat; */
+  background-position: bottom;
+  /* background-size: cover; */
+}
+
+.demo-content {
+  position: relative;
 }
