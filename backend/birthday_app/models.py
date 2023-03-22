@@ -4,7 +4,8 @@ from django.db import models
 
 class Response(models.Model):
     name = models.CharField(max_length=100)
-    guest_count = models.CharField(max_length=100)
+    adult_count = models.CharField(max_length=100)
+    kids_count = models.CharField(max_length=100)
     message = models.CharField(max_length=500, blank=True, null=True)
 
     def __str__(self):

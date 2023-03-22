@@ -1,3 +1,11 @@
+html { 
+  background: url('../public/Background.jpeg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .App {
   text-align: center;
   color: white;
@@ -9,28 +17,20 @@
 }
 
 #Mario{
-  width: 10vw;
-  margin: -30vh 0 10vh 5vw;
+  width: 8vw;
+  margin-right: 10px;
 }
 #Luigi{
-  width: 10vw;
-  margin: -30vh 5vw 10vh 0;
-}
-#Yoshi{
-  width: 20vw;
+  width: 8vw;
+  margin-left: 10px;
 }
 #images{
   display: flex;
-  justify-content:space-between;
+  justify-content:center;
 }
 
-/* .redMushroom, .greenMushroom{
-  width: 15vw;
-  margin-bottom: 10px;
-} */
-
 .redMushroom, .greenMushroom{
-  width: 5vw;
+  width: 8vw;
   padding-bottom: 25px;
 }
 
@@ -49,6 +49,9 @@
   height: 15vh;
   margin: 10px 25px;
 }
+.buttons:hover{
+  cursor: pointer;
+}
 
 .RSVPform form {
   display: flex;
@@ -61,10 +64,15 @@
   width: fit-content;
 }
 
-form input, form textarea {
+form input, form textarea{
   border-radius: 5px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   width: 50vw;
+}
+
+.guestCount{
+  display: flex;
+  width: 50.5vw !important;
 }
 
 .App hr {
@@ -76,9 +84,10 @@ form input, form textarea {
   float: left;
   bottom: 0;
   position: fixed;
+  font-size: x-small;
 }
 
-.demo-wrap {
+/* .demo-wrap {
   position: relative;
 }
 
@@ -90,13 +99,20 @@ form input, form textarea {
   top: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0.9;
   background-image: url('../public/Background.jpeg');
-  /* background-repeat: no-repeat; */
   background-position: bottom;
-  /* background-size: cover; */
 }
 
 .demo-content {
   position: relative;
+} */
+
+@media screen and (max-width: 490px){
+  .redMushroom, .greenMushroom{
+    width: 20vw;
+  }
+
+  #Mario, #Luigi{
+    width: 20vw;
+  }
 }

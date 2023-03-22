@@ -25,12 +25,16 @@ function Main() {
       {showResponseForm || showDeclineForm 
         ? ""
         : <>
+            <div id='images'>
+              <img alt='Mario' src='Mario.png' id='Mario'/>
+              <img alt='Luigi' src='Luigi.png' id='Luigi'/>
+            </div>
             <h3>Jeffrey Hoey has LEVELED UP to age 6!</h3>
             <h2>Join us for a<br />Super 6th Birthday Party</h2>
             {/* <h3>costumes encouraged</h3> */}
             {/* <hr /> */}
             {/* <img alt='Yoshi' src='Yoshi.png' id='Yoshi'/> */}
-            <h3>Saturday, April 29<br />1-2:30pm</h3>
+            <h3>Saturday, April 29<br /><br />1-2:30pm</h3>
             <hr/>
             <h3>Ninja Academy New England<br />321 Massachusetts Ave, Lunenburg, MA</h3>
           </>
@@ -39,14 +43,14 @@ function Main() {
           <h3>
             Please
             <br /><br />
-            <div className='buttonsContainer'>
+            <div className='buttonsContainer' onClick={seeResponseForm}>
               <div className='buttons'>
-                <img className='greenMushroom' src='greenMushroom.webp' onClick={seeResponseForm}/>
+                <img className='greenMushroom' src='greenMushroom.webp'/>
                   Accept
               </div>
               <span style={{fontSize: '10px'}}> OR </span>
-              <div className='buttons'>
-                <img className='redMushroom' src='redMushroom.webp' onClick={seeDeclineForm}/>
+              <div className='buttons'  onClick={seeDeclineForm}>
+                <img className='redMushroom' src='redMushroom.webp'/>
                 Decline
               </div>
             </div>
@@ -61,10 +65,10 @@ function Main() {
       {showDeclineForm && (
         <DeclineForm />
       )}  
-      <div id='images'>
+      {/* <div id='images'>
         <img alt='Mario' src='Mario.png' id='Mario'/>
         <img alt='Luigi' src='Luigi.png' id='Luigi'/>
-      </div>
+      </div> */}
     </div>
     <div id='footer'>
         <footer>

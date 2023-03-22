@@ -83,16 +83,23 @@ function RSVPForm() {
             />
             <br />
 
-            {/* <label htmlFor='guestCount'>
-                How many people will be coming? <br /> (include yourself!)
-            </label> */}
-            <input
-                placeholder="How many people will be coming?"
-                id='guest_count'
-                type='text'
-                onChange={handleChange}
-                value={formState.guest_count}
-            />
+            <div className='guestCount'>
+                <input
+                    placeholder="How many adults?"
+                    id='adult_count'
+                    type='text'
+                    onChange={handleChange}
+                    value={formState.adult_count}
+                />
+                &nbsp;
+                <input
+                    placeholder="How many kids?"
+                    id='kids_count'
+                    type='text'
+                    onChange={handleChange}
+                    value={formState.kids_count}
+                />
+            </div>
             <br />
 
             {/* <label htmlFor='message'>Leave a Message for the Hoeys:</label> */}
