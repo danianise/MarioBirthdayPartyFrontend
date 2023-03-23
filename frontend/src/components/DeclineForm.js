@@ -19,7 +19,7 @@ function DeclineForm() {
         //do something with the data in the component state
         console.log(formState)
 
-        const url = 'http://localhost:8000/declines/'
+        const url = 'https://birthdaypartybackend-production.up.railway.app/declines/'
         const options = {
             method: 'POST',
             headers: {

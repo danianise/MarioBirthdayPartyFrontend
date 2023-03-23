@@ -25,11 +25,11 @@ function Main() {
       {showResponseForm || showDeclineForm 
         ? ""
         : <>
+            <h3>Jeffrey Hoey has LEVELED UP to age 6!</h3>
             <div id='images'>
               <img alt='Mario' src='Mario.png' id='Mario'/>
               <img alt='Luigi' src='Luigi.png' id='Luigi'/>
             </div>
-            <h3>Jeffrey Hoey has LEVELED UP to age 6!</h3>
             <h2>Join us for a<br />Super 6th Birthday Party</h2>
             {/* <h3>costumes encouraged</h3> */}
             {/* <hr /> */}
@@ -43,8 +43,8 @@ function Main() {
           <h3>
             Please
             <br /><br />
-            <div className='buttonsContainer' onClick={seeResponseForm}>
-              <div className='buttons'>
+            <div className='buttonsContainer'>
+              <div className='buttons'  onClick={seeResponseForm}>
                 <img className='greenMushroom' src='greenMushroom.webp'/>
                   Accept
               </div>

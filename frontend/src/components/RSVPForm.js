@@ -37,7 +37,7 @@ function RSVPForm() {
         //do something with the data in the component state
         console.log(formState)
 
-        const url = 'http://localhost:8000/responses/'
+        const url = 'https://birthdaypartybackend-production.up.railway.app/responses/'
         const options = {
             method: 'POST',
             headers: {
@@ -69,7 +69,7 @@ function RSVPForm() {
   return (
     <div className='RSVPform'>
         <br />
-        <h2 style={{color: '#FBD000'}}>Let's Go!</h2>
+        <h2 style={{color: '#FBD000'}}>Here We Go!</h2>
         <form onSubmit={handleSubmit}>
             {/* <label htmlFor='name'>
                 Your Name:
