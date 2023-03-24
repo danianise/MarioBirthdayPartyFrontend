@@ -70,11 +70,6 @@ function Main() {
         <img alt='Luigi' src='Luigi.png' id='Luigi'/>
       </div> */}
     </div>
-    <div id='footer'>
-        <footer>
-        © Danielle Hoey 2023
-        </footer>
-    </div>
     </>
   )
 }

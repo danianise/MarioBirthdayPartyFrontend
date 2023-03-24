@@ -6,15 +6,23 @@ html {
   background-size: cover;
 }
 
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .App {
   text-align: center;
   color: white;
   text-shadow: 2px 2px black;
-  padding: 10vh 0 10vh 0;
   font-family: 'Press Start 2P', cursive;
   /* background-image: url('../public/Background.jpeg');
   background-position:bottom; */
-  padding-top: 10px;
+}
+
+.main{
+  padding-bottom: 0;
 }
 
 #Mario{
@@ -78,14 +86,6 @@ form input, form textarea{
 
 .App hr {
   width: 40vw;
-}
-
-#footer {
-  display: block;
-  float: left;
-  bottom: 0;
-  position: absolute;
-  font-size: x-small;
 }
 
 /* .demo-wrap {
