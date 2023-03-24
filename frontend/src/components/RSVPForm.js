@@ -83,7 +83,7 @@ function RSVPForm() {
             />
             <br />
 
-            <div className='guestCount'>
+            {/* <div className='guestCount'> */}
                 <input
                     placeholder="How many adults?"
                     id='adult_count'
@@ -99,7 +99,7 @@ function RSVPForm() {
                     onChange={handleChange}
                     value={formState.kids_count}
                 />
-            </div>
+            {/* </div> */}
             <br />
 
             {/* <label htmlFor='message'>Leave a Message for the Hoeys:</label> */}
