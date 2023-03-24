@@ -37,7 +37,7 @@ function RSVPForm() {
         //do something with the data in the component state
         console.log(formState)
 
-        const url = 'https://birthdaypartybackend-production.up.railway.app/responses/'
+        const url = process.env.REACT_APP_DB_URL + '/responses/'
         const options = {
             method: 'POST',
             headers: {
