@@ -68,8 +68,12 @@ function RSVPForm() {
 
   return (
     <div className='RSVPform'>
-        <br />
-        <h2 style={{color: '#FBD000'}}>Here We Go!</h2>
+        <a className='backButton' href='/'>
+            <button>Back to Invitation</button>
+          </a>
+        <h2 style={{color: '#FBD000'}}>
+          Here We Go!
+        </h2>
         <form onSubmit={handleSubmit}>
             {/* <label htmlFor='name'>
                 Your Name:

@@ -13,7 +13,7 @@ function YesConfirmation() {
       <h4>Come back for the party information any time</h4>
       <a href='/'>
           <button>Back to Invitation</button>
-        </a>
+      </a>
     </div>
   )
 }
