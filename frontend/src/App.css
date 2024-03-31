@@ -125,6 +125,7 @@ form input, form textarea{
 
   #Mario, #Luigi{
     width: 15vw;
+    height: 25vh;
   }
 
   .description{
