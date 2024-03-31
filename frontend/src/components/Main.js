@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
-
-import RSVPForm from './RSVPForm'
-import DeclineForm from './DeclineForm'
+import RSVPEmail from './RSVPEmail'
+import DeclineEmail from './DeclineEmail'
 
 function Main() {
 
@@ -32,10 +31,7 @@ function Main() {
             </div>
             <h5>Saturday, April 27 2:30-4:30 PM<br/><br/>
             Fliptastics Gymnastics<br />16 Benson St, Fitchburg, MA</h5>
-          </div>
-          
-      }
-          <h6>
+            <h6>
             Please
             <div className='buttonsContainer'>
               <div className='buttons'  onClick={seeResponseForm}>
@@ -48,20 +44,21 @@ function Main() {
                 Decline
               </div>
             </div>
-            by April 15
+            by April 20
           </h6>
+          </div>
+          
+          
+      }
+          
         </div>
         
       {showResponseForm && (
-        <RSVPForm />
+        <RSVPEmail />
       )}
       {showDeclineForm && (
-        <DeclineForm />
+        <DeclineEmail />
       )}  
-      {/* <div id='images'>
-        <img alt='Mario' src='Mario.png' id='Mario'/>
-        <img alt='Luigi' src='Luigi.png' id='Luigi'/>
-      </div> */}
     </div>
     </>
   )
