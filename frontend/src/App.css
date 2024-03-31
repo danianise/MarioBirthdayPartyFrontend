@@ -102,6 +102,11 @@ form input, form textarea{
 
   .mobile{
     display:block;
+    text-align: center;
+  }
+
+  #header{
+    text-align: center;
   }
 
   .main{
@@ -111,7 +116,7 @@ form input, form textarea{
   .App{
     margin:0;
     background: url('../public/gameboy.jpeg') no-repeat center center;
-    background-size: 100vw 100%;
+    background-size: 100% 100%;
   }
 
   .redMushroom, .greenMushroom{
@@ -119,7 +124,7 @@ form input, form textarea{
   }
 
   #Mario, #Luigi{
-    width: 10vw;
+    width: 15vw;
   }
 
   .description{
