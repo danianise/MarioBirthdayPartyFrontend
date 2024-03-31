@@ -120,12 +120,12 @@ form input, form textarea{
   }
 
   .redMushroom, .greenMushroom{
-    width: 5vw;
+    width: 20vw;
   }
 
   #Mario, #Luigi{
-    width: 15vw;
-    height: 25vh;
+    width: auto;
+    height: 30vh;
   }
 
   .description{
