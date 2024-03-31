@@ -24,16 +24,16 @@ function Main() {
       {showResponseForm || showDeclineForm 
         ? ""
         : <div>
-            <h4>Join us for a Super 7th Birthday Party</h4>
+            <h4 className="desktop">Join us for a Super 7th Birthday Party</h4>
             <div id='images'>
               <img alt='Mario' src='Mario.png' id='Mario'/>
               <img alt='Luigi' src='Luigi.png' id='Luigi'/>
             </div>
-            <h5>Saturday, April 27 2:30-4:30 PM<br/><br/>
+            <h5 className="date">Saturday, April 27 2:30-4:30 PM<br/><br/>
             Fliptastics Gymnastics<br />16 Benson St, Fitchburg, MA</h5>
-            <h6>
+            <h6 className='date'>
             Please
-            <div className='buttonsContainer'>
+            <div className='buttonsContainer date'>
               <div className='buttons'  onClick={seeResponseForm}>
                 <img className='greenMushroom' src='greenMushroom.webp'/>
                   Accept

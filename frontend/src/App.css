@@ -7,6 +7,10 @@
   font-family: 'Press Start 2P', cursive;
 }
 
+.mobile{
+  display: none;
+}
+
 .main{
   background: url('../public/switch.png') no-repeat center center fixed;
   background-size: 95vw;
@@ -92,14 +96,22 @@ form input, form textarea{
 
 @media screen and (max-width: 1000px){
 
+  .desktop{
+    display: none;
+  }
+
+  .mobile{
+    display:block;
+  }
+
   .main{
     background: none;
   }
 
   .App{
     margin:0;
-    background: url('../public/switch-no-screen.jpeg') no-repeat center center;
-    background-size: 100vw 110vh;
+    background: url('../public/gameboy.jpeg') no-repeat center center;
+    background-size: 100vw 100%;
   }
 
   .redMushroom, .greenMushroom{
@@ -107,7 +119,15 @@ form input, form textarea{
   }
 
   #Mario, #Luigi{
-    width: 15vw;
+    width: 10vw;
+  }
+
+  .description{
+    margin-bottom: 4%;
+  }
+
+  .date{
+    font-size: medium;
   }
 
   form input, form textarea{
