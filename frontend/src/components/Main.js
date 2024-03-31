@@ -54,10 +54,14 @@ function Main() {
         </div>
         
       {showResponseForm && (
-        <RSVPEmail />
+        <div className="RSVP">
+          <RSVPEmail />
+        </div>
       )}
       {showDeclineForm && (
+        <div className="decline">
         <DeclineEmail />
+        </div>
       )}  
     </div>
     </>

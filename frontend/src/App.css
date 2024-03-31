@@ -140,4 +140,8 @@ form input, form textarea{
   form input, form textarea{
     width: 50vw;
   }
+
+  .RSVP, .decline{
+    margin-bottom:65vh;
+  }
 }
