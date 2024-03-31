@@ -1,37 +1,40 @@
-html { 
-  background: url('../public/Background.jpeg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-body{
-  min-height: 100vh;
+.App {
   display: flex;
   flex-direction: column;
-}
-
-.App {
-  text-align: center;
+  align-items: center;
   color: white;
   text-shadow: 2px 2px black;
   font-family: 'Press Start 2P', cursive;
-  /* background-image: url('../public/Background.jpeg');
-  background-position:bottom; */
 }
 
 .main{
-  padding-bottom: 0;
+  background: url('../public/switch.png') no-repeat center center fixed;
+  background-size: 95vw;
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.description{
+  margin-bottom: 4%;
+}
+
+#header{
+  color: black;
+  text-shadow: 2px 2px grey;
+  font-size:medium;
 }
 
 #Mario{
-  width: 8vw;
-  margin-right: 10px;
+  width: 4vw;
+  margin-right: 5%;
 }
 #Luigi{
-  width: 8vw;
-  margin-left: 10px;
+  width: 4vw;
+  margin-left: 2%;
 }
 #images{
   display: flex;
@@ -39,14 +42,14 @@ body{
 }
 
 .redMushroom, .greenMushroom{
-  width: 8vw;
-  padding-bottom: 25px;
+  width: 5vw;
 }
 
 .buttonsContainer{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: small;
 }
 
 .buttons{
@@ -79,14 +82,6 @@ form input, form textarea{
   width: 25vw;
 }
 
-/* .guestCount{
-  display: flex;
-  width: 50.5vw !important;
-} */
-
-.App hr {
-  width: 40vw;
-}
 
 .backButton{
   display: flex;
@@ -96,12 +91,23 @@ form input, form textarea{
 }
 
 @media screen and (max-width: 1000px){
+
+  .main{
+    background: none;
+  }
+
+  .App{
+    margin:0;
+    background: url('../public/switch-no-screen.jpeg') no-repeat center center;
+    background-size: 100vw 110vh;
+  }
+
   .redMushroom, .greenMushroom{
-    width: 20vw;
+    width: 5vw;
   }
 
   #Mario, #Luigi{
-    width: 20vw;
+    width: 15vw;
   }
 
   form input, form textarea{

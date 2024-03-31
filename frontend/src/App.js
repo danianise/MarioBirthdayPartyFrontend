@@ -1,6 +1,6 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom" 
-
+import Header from './components/Header';
 import Main from './components/Main';
 import YesConfirmation from './components/YesConfirmation';
 import DeclineConfirmation from './components/DeclineConfirmation';
@@ -12,8 +12,7 @@ function App() {
     <div class="demo-content">
 
       <div className="App">
-        {/* <Background /> */}
-        {/* <Images /> */}
+        <Header />
         <Routes>
           <Route path='/' element={<Main />} />
           <Route path='/accepted' element={<YesConfirmation />} />

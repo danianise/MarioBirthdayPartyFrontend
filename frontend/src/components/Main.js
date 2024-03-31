@@ -24,39 +24,32 @@ function Main() {
       <div className='description'>
       {showResponseForm || showDeclineForm 
         ? ""
-        : <>
-            <h3>Jeffrey Hoey has LEVELED UP to age 6!</h3>
+        : <div>
+            <h4>Join us for a Super 7th Birthday Party</h4>
             <div id='images'>
               <img alt='Mario' src='Mario.png' id='Mario'/>
               <img alt='Luigi' src='Luigi.png' id='Luigi'/>
             </div>
-            <h2>Join us for a<br />Super 6th Birthday Party</h2>
-            {/* <h3>costumes encouraged</h3> */}
-            {/* <hr /> */}
-            {/* <img alt='Yoshi' src='Yoshi.png' id='Yoshi'/> */}
-            <h3>Saturday, April 29<br /><br />1-2:30pm</h3>
-            <hr/>
-            <h3>Ninja Academy New England<br />321 Massachusetts Ave, Lunenburg, MA</h3>
-          </>
+            <h5>Saturday, April 27 2:30-4:30 PM<br/><br/>
+            Fliptastics Gymnastics<br />16 Benson St, Fitchburg, MA</h5>
+          </div>
           
       }
-          <h3>
+          <h6>
             Please
-            <br /><br />
             <div className='buttonsContainer'>
               <div className='buttons'  onClick={seeResponseForm}>
                 <img className='greenMushroom' src='greenMushroom.webp'/>
                   Accept
               </div>
-              <span style={{fontSize: '10px'}}> OR </span>
+              <span> OR </span>
               <div className='buttons'  onClick={seeDeclineForm}>
-                <img className='redMushroom' src='redMushroom.webp'/>
+                <img className='redMushroom' src='goomba.svg'/>
                 Decline
               </div>
             </div>
-            <br /><br />
             by April 15
-          </h3>
+          </h6>
         </div>
         
       {showResponseForm && (
