@@ -50,7 +50,7 @@ function DeclineForm() {
         <a className='backButton' href='/'>
             <button>Back to Invitation</button>
         </a>
-        <h3 style={{color: '#FBD000'}}>Sorry... Can't make it!</h3>
+        <h3 style={{color: 'white'}}>Sorry... Can't make it!</h3>
         <h3 style={{color: 'red'}}>(Game Over)</h3>
         <form onSubmit={handleSubmit}>
             <input

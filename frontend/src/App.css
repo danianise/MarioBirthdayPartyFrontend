@@ -1,59 +1,76 @@
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: url('../public/smash.png');
+  height: 100vh;
   color: white;
   text-shadow: 2px 2px black;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Play", sans-serif;
 }
 
 .mobile{
   display: none;
 }
 
-.main{
-  background: url('../public/switch.png') no-repeat center center fixed;
-  background-size: 95vw;
-  display: flex;
-  text-align: center;
-  width: 100%;
+#logo_img{
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  width: 50vw;
   height: 100vh;
-  align-items: center;
-  justify-content: center;
+  right: 0;
+  position:fixed;
 }
 
-.description{
-  margin-bottom: 4%;
-}
-
-#header{
-  color: black;
+.header{
   text-shadow: 2px 2px grey;
-  font-size:medium;
+  display: flex;
+  flex-direction: column;
 }
 
-#Mario{
-  width: 4vw;
-  margin-right: 5%;
+#header_h2{
+  margin: 0;
 }
-#Luigi{
-  width: 4vw;
-  margin-left: 2%;
+
+#name_div{
+  font-size:300%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  /* border: 1px solid purple; */
 }
+
+#leveled_up_div{
+  font-size: 250%;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  /* border: 1px dotted green; */
+}
+
+.main{
+  /* border: 1px solid red; */
+  width: 50%;
+  text-align: center;
+}
+
 #images{
   display: flex;
   justify-content:center;
 }
 
-.redMushroom, .greenMushroom{
-  width: 5vw;
+.accept_img, .decline_img{
+  width: auto;
+  height: 25vh;
 }
 
 .buttonsContainer{
+  /* border: 1px solid red; */
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: small;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .buttons{
@@ -62,7 +79,7 @@
   justify-content: center;
   align-items: center;
   width: fit-content;
-  height: 15vh;
+  height: 50vh;
   margin: 10px 25px;
 }
 .buttons:hover{
@@ -105,33 +122,44 @@ form input, form textarea{
     text-align: center;
   }
 
-  #header{
-    text-align: center;
+  .main{
+    width: 100%;
   }
 
-  .main{
-    background: none;
+  #logo_img{
+    /* border: 1px solid red; */
+    position:unset;
+    height: 20%;
   }
 
   .App{
-    margin:0;
-    background: url('../public/gameboy.jpeg') no-repeat center center;
-    background-size: 100% 100%;
+    /* border: 1px solid red; */
+    background: url('../public/smash.png');
+    height: unset;
   }
 
-  .redMushroom, .greenMushroom{
-    width: 25%;
+  .buttonsContainer{
+    display: flex;
+    align-items: center;
+    position:unset;
+    width:unset;
+    height: fit-content;
   }
 
-  #Mario, #Luigi{
+  .buttons{
+    height:fit-content;
+  }
+
+  /* #Mario, #Luigi{
+    border: 1px solid red;
     width: auto;
     height: 30vh;
     margin-bottom: 5px;
-  }
+  } */
 
-  .description{
+  /* .description{
     margin-bottom: 4%;
-  }
+  } */
 
   .date{
     font-size: medium;
@@ -142,6 +170,6 @@ form input, form textarea{
   }
 
   .RSVP, .decline{
-    margin-bottom:65vh;
+    padding-bottom: 5%;
   }
 }

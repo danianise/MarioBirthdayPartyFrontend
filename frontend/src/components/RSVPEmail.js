@@ -19,31 +19,32 @@ export const RSVPEmail = () => {
   const form = useRef()
 
   const handleOnSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     // const form = useRef()
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
       .then((result) => {
         console.log(result.text);
         Swal.fire({
           icon: 'success',
-          title: 'Message Sent Successfully'
+          title: "RSVP received, can't wait to see you!"
         })
       }, (error) => {
         console.log(error.text);
         Swal.fire({
           icon: 'error',
-          title: 'Ooops, something went wrong',
+          title: 'Oops, something went wrong',
           text: error.text,
         })
       });
     e.target.reset()
+    // location.reload()
   }
 
   return (<div className="RSVPForm">
         <a className='backButton' href='/'>
             <button>Back to Invitation</button>
           </a>
-        <h2 style={{color: '#FBD000'}}>
+        <h2>
           Here We Go!
         </h2>
     <div className='contactForm'>
@@ -94,7 +95,6 @@ export const RSVPEmail = () => {
         <Form.Field
           id='form-textarea-control-message'
           control={TextArea}
-        //   label='Briefly describe why you need dog training'
           name='message'
           placeholder='Message (optional)'
           required

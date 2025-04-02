@@ -26,13 +26,13 @@ export const DeclineEmail = () => {
         console.log(result.text);
         Swal.fire({
           icon: 'success',
-          title: 'Message Sent Successfully'
+          title: 'RSVP received, we will miss you!'
         })
       }, (error) => {
         console.log(error.text);
         Swal.fire({
           icon: 'error',
-          title: 'Ooops, something went wrong',
+          title: 'Oops, something went wrong',
           text: error.text,
         })
       });
@@ -43,7 +43,7 @@ export const DeclineEmail = () => {
         <a className='backButton' href='/'>
             <button>Back to Invitation</button>
         </a>
-        <h3 style={{color: '#FBD000'}}>Sorry... Can't make it!</h3>
+        <h3>Sorry... Can't make it!</h3>
         <h3 style={{color: 'red'}}>(Game Over)</h3>
     <div className='contactForm'>
       <Form

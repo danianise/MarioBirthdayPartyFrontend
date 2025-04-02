@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import RSVPEmail from './RSVPEmail'
 import DeclineEmail from './DeclineEmail'
+import Header from './Header'
 
 function Main() {
 
@@ -20,35 +21,32 @@ function Main() {
   return (
     <>
     <div className='main'>
+      <Header />
       <div className='description'>
       {showResponseForm || showDeclineForm 
         ? ""
         : <div>
-            <h4 className="desktop">Join us for a Super 7th Birthday Party</h4>
-            <div id='images'>
+            <h2 className='join_us'>Join us for a video game party!</h2>
+            {/* <div id='images'>
               <img alt='Mario' src='Mario.png' id='Mario'/>
               <img alt='Luigi' src='Luigi.png' id='Luigi'/>
-            </div>
-            <h5 className="date">Saturday, April 27 2:30-4:30 PM<br/><br/>
-            Fliptastics Gymnastics<br />16 Benson St, Fitchburg, MA</h5>
-            <h6 className='date'>
-            Please
-            <div className='buttonsContainer date'>
+            </div> */}
+            <h3 className='date'>
+              Saturday, April 19 2:00-4:00 PM<br/>
+              102 Pratt St, Lunenburg, MA
+            </h3>
+            <div className='buttonsContainer'>
               <div className='buttons'  onClick={seeResponseForm}>
-                <img className='greenMushroom' src='greenMushroom.webp'/>
-                  Accept
+                <img className='accept_img' src='accept.webp'/>
+                Accept
               </div>
               <span> OR </span>
               <div className='buttons'  onClick={seeDeclineForm}>
-                <img className='redMushroom' src='goomba.svg'/>
+                <img className='decline_img' src='decline.png'/>
                 Decline
               </div>
             </div>
-            by April 20
-          </h6>
-          </div>
-          
-          
+          </div>   
       }
           
         </div>
